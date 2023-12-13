@@ -37,6 +37,8 @@ button{ border: none; margin: 0; padding: 10px 25px 10px 25px; width: auto; over
 @keyframes fade-in-bottom { 0% { opacity: 0; transform: translateY(50px); } 100% { opacity: 1; transform: translateY(0); } }
 .hero__lockup { display: flex; flex-direction: column; justify-content: center; align-items: start; animation: fade-in-bottom 1.3s ease 0s 1 normal forwards;}
 .hero__heading {font-size: 5rem; }
+@media screen and (max-width: 768px) {.hero__heading {font-size: 4rem; } } 
+
 .hero__heading span {color: #86BC25;}
 .hero__body {margin-bottom: 1rem; font-size: 1.75rem;}
 @media screen and (max-width: 768px) {
@@ -299,6 +301,12 @@ button{ border: none; margin: 0; padding: 10px 25px 10px 25px; width: auto; over
   padding: 1em 1em;
   border-radius: 0.8rem;
 }
+@media screen and (max-width: 768px) { 
+  .modal__window {
+    min-width: 300px;
+    min-height: 300px;
+  }
+} 
 
 .modal__close {
   position: absolute;
