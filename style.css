@@ -31,9 +31,9 @@ button{ border: none; margin: 0; padding: 10px 25px 10px 25px; width: auto; over
 @media (min-width:768px) { .responsive-two-column-grid { display: grid; grid-template-columns: 1fr 1fr; } }
 
 /* -----------------------------HERO---------------------------------- */
-.hero{margin-bottom: 4rem; background: url(./Assets/hero-bg.png) center center/cover no-repeat;}
+.hero{margin-bottom: 4rem; background: url(./Assets/hero-bg.png) center center/cover no-repeat; }
 @keyframes fade-in-forward { 0% { opacity: 0; transform: scale(0.6); } 100% { opacity: 1; transform: scale(1); } }
-.hero__img { animation: fade-in-forward 1.3s ease 0s 1 normal forwards;}
+.hero__img { animation: fade-in-forward 1.3s ease 0s 1 normal forwards; padding: 2rem 1rem;}
 @keyframes fade-in-bottom { 0% { opacity: 0; transform: translateY(50px); } 100% { opacity: 1; transform: translateY(0); } }
 .hero__lockup { display: flex; flex-direction: column; justify-content: center; align-items: start; animation: fade-in-bottom 1.3s ease 0s 1 normal forwards;}
 .hero__heading {font-size: 5rem; }
@@ -47,7 +47,7 @@ button{ border: none; margin: 0; padding: 10px 25px 10px 25px; width: auto; over
 .hero__btn  { background: #86BC25; color: rgb(0, 0, 0); font-weight: bold; font-size: 1.125rem; }
 
 @media screen and (max-width: 768px) {
-  .hero__lockup { display: flex; flex-direction: column; justify-content: center; align-items: center; animation: fade-in-bottom 1.3s ease 0s 1 normal forwards;}
+  .hero__lockup { display: flex; flex-direction: column; justify-content: center; align-items: center;}
   .hero__body{text-align: center;}
   .hero__heading{text-align: center; line-height: 1;}
 }
@@ -66,7 +66,7 @@ button{ border: none; margin: 0; padding: 10px 25px 10px 25px; width: auto; over
   padding: 2rem;
   margin-top: 5rem;
   min-height: 450px;
-  background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0)),url('./Assets/full-video-img.png');
+  background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.062), rgb(0, 0, 0)),url('./Assets/full-video-img.png');
   background-position: center;
   background-size: cover;
   display: flex;
@@ -85,11 +85,11 @@ button{ border: none; margin: 0; padding: 10px 25px 10px 25px; width: auto; over
   .full-width-video img{ position: absolute; left: 50%; transform: translate(-50%, -50%); top: 50%; }
 }
 
-4
+
 
 /* --------------------------------------videos grid--------------------------------------- */
 .videos{ margin-bottom: 10rem; }
-@media screen and (max-width: 768px) { .videos{ margin-bottom: 5rem; } }
+@media screen and (max-width: 768px) { .videos{ margin-bottom: 6rem; } }
 
 .videos__heading{
     font-size: 1.75rem;
@@ -129,7 +129,7 @@ button{ border: none; margin: 0; padding: 10px 25px 10px 25px; width: auto; over
   }
 /* ----------------------------------Tax links---------------------------------------------- */
 .tax-links{
-  margin-bottom: 10rem;
+  margin-bottom: 12rem;
 }
 @media screen and (max-width: 768px) { .tax-links{ margin-bottom: 8rem; } }
 
@@ -291,6 +291,7 @@ button{ border: none; margin: 0; padding: 10px 25px 10px 25px; width: auto; over
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
 .modal__window {
