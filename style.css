@@ -1,6 +1,3 @@
-/* COLORS */
-/* Deloitte Green ->  #86BC25*/
-
 * { box-sizing: border-box;}
 html{scroll-behavior: smooth; }
 body { font-family: "Open Sans", "Arial", sans-serif; font-size: 1.125rem; margin: 0; direction: rtl; color: #ffffff;  background-color: #000000;}
@@ -21,7 +18,7 @@ a { color: inherit; text-decoration: none; }
 a:focus, a:hover { text-decoration: none; }
 button{ border: none; margin: 0; padding: 10px 25px 10px 25px; width: auto; overflow: visible; -webkit-font-smoothing: inherit; -moz-osx-font-smoothing: inherit; -webkit-appearance: none; }
 .container{ max-width: 1200px; margin: 0 auto; padding: 0rem 1rem;}
-.m-width{max-width: 1000px;}
+.m-width{max-width: 800px;}
 
 .flex-center{display: flex; justify-content: end; align-items: center; flex-direction: column;}
 
@@ -31,20 +28,17 @@ button{ border: none; margin: 0; padding: 10px 25px 10px 25px; width: auto; over
 @media (min-width:768px) { .responsive-two-column-grid { display: grid; grid-template-columns: 1fr 1fr; } }
 
 /* -----------------------------HERO---------------------------------- */
-.hero{margin-bottom: 4rem; background: url(./Assets/hero-bg.png) center center/cover no-repeat; }
+.hero{margin-bottom: 4rem; background: url(https://www2.deloitte.com/content/dam/html/il/2023/tax-landing-page/assets/hero-bg.png) center center/cover no-repeat; }
 @keyframes fade-in-forward { 0% { opacity: 0; transform: scale(0.6); } 100% { opacity: 1; transform: scale(1); } }
-.hero__img { animation: fade-in-forward 1.3s ease 0s 1 normal forwards; padding: 2rem 1rem;}
+.hero__img { animation: fade-in-forward 1.3s ease 0s 1 normal forwards; padding: 2rem 1rem; display: flex; justify-content: center; align-items: center; }
 @keyframes fade-in-bottom { 0% { opacity: 0; transform: translateY(50px); } 100% { opacity: 1; transform: translateY(0); } }
 .hero__lockup { display: flex; flex-direction: column; justify-content: center; align-items: start; animation: fade-in-bottom 1.3s ease 0s 1 normal forwards;}
-.hero__heading {font-size: 5rem; }
+.hero__heading {font-size: 5rem;  text-align: right;}
 @media screen and (max-width: 768px) {.hero__heading {font-size: 4rem; } } 
-
 .hero__heading span {color: #86BC25;}
-.hero__body {margin-bottom: 1rem; font-size: 1.75rem;}
-@media screen and (max-width: 768px) {
-.videos__heading {margin-bottom: 1rem; font-size: 1rem;}
-}
-.hero__btn  { background: #86BC25; color: rgb(0, 0, 0); font-weight: bold; font-size: 1.125rem; }
+.hero__body {margin-bottom: 2rem; font-size: 1.75rem;}
+
+@media screen and (max-width: 768px) { .videos__heading {margin-bottom: 1rem; font-size: 1rem;} } .hero__btn  { background: #86BC25; color: rgb(0, 0, 0); font-weight: bold; font-size: 1.125rem; cursor: pointer;}
 
 @media screen and (max-width: 768px) {
   .hero__lockup { display: flex; flex-direction: column; justify-content: center; align-items: center;}
@@ -64,9 +58,8 @@ button{ border: none; margin: 0; padding: 10px 25px 10px 25px; width: auto; over
 /* --------------------------------------full-width-video--------------------------------------- */
 .full-width-video{
   padding: 2rem;
-  margin-top: 5rem;
   min-height: 450px;
-  background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.062), rgb(0, 0, 0)),url('./Assets/full-video-img.png');
+  background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.062), rgb(0, 0, 0)),url('https://www2.deloitte.com/content/dam/html/il/2023/tax-landing-page/assets/full-video-img.png');
   background-position: center;
   background-size: cover;
   display: flex;
@@ -76,30 +69,41 @@ button{ border: none; margin: 0; padding: 10px 25px 10px 25px; width: auto; over
   position: relative;
   border-radius: .8rem;
 }
-.play-btn{position: absolute; left: 50%; transform: translate(-50%, -70%); top: 40%;}
-.full-width-video h3{ color: #ffffff; font-size: 1.75rem; }
+.play-btn{position: absolute; left: 50%; transform: translate(-50%, -70%); top: 50%;}
+.full-width-video h3{ color: #ffffff; font-size: 1.75rem; margin-bottom: 0.75rem;}
 .full-width-video p{ width: 80%; }
 @media screen and (max-width: 768px) { /*break point-768px*/
-  .full-width-video{ min-height: 500px; padding: 1rem; margin-top: 3rem; }
+  .full-width-video{ min-height: 600px; padding: 1rem; margin-top: 3rem; }
   .full-width-video p{ width: 100%; font-size: 1rem; }
-  .full-width-video img{ position: absolute; left: 50%; transform: translate(-50%, -50%); top: 50%; }
+  /* .full-width-video img{ position: absolute; left: 50%; transform: translate(-50%, -50%); top: 50%; } */
+.play-btn{position: absolute; left: 50%; transform: translate(-50%, -70%); top: 40%;}
+
 }
 
 
 
 /* --------------------------------------videos grid--------------------------------------- */
-.videos{ margin-bottom: 10rem; }
+.videos{ margin-bottom: 8rem; }
 @media screen and (max-width: 768px) { .videos{ margin-bottom: 6rem; } }
 
 .videos__heading{
-    font-size: 1.75rem;
-    font-weight: 400;
-    color: #ffffff;
-    margin-bottom: 1rem;
-    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
     animation: fade-in-bottom 1.3s ease 0s 1 normal forwards;
 }
-@media screen and (max-width: 768px) { .videos__heading { font-size: 1.5rem; } }
+.videos__body{
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  text-align: right;
+  animation: fade-in-bottom 1.3s ease 0s 1 normal forwards;
+}
+.videos__heading--center{
+  text-align: center;
+  margin: 5rem 0rem 3rem 0rem;
+}
+@media screen and (max-width: 768px) { .videos__heading { font-size: 1.25rem; } }
 
   .videos .grid > ul {
     display: grid;
@@ -128,51 +132,33 @@ button{ border: none; margin: 0; padding: 10px 25px 10px 25px; width: auto; over
     color: #7e7e7e;
   }
 /* ----------------------------------Tax links---------------------------------------------- */
-.tax-links{
-  margin-bottom: 12rem;
-}
-@media screen and (max-width: 768px) { .tax-links{ margin-bottom: 8rem; } }
-
-.tax-links__heading{
-  color: white;
-  font-size: 2rem;
-  text-align: center;
-  margin: 0rem 2rem 4rem 2rem;
-}
+.tax-links{ margin-bottom: 8rem; }
+@media screen and (max-width: 768px) { .tax-links{ margin-bottom: 6rem; } }
+.tax-links__heading{ color: white; font-size: 2rem; text-align: center; margin: 0rem 2rem 4rem 2rem; }
 @media screen and (max-width: 768px) { .tax-links__heading{ margin-bottom: 2rem;} }
+.tax-links__heading span{ color:#86BC25 }
+.box{ min-height: 300px; width: 100%; background-size: cover; color: white; transition: transform 0.5s; /* Animation */ cursor: pointer; text-align: center;}
+.box:hover { transform: scale(1.08); }
 
-.tax-links__heading span{
-  color:#86BC25
-}
-.box{
-  min-height: 300px;
-  width: 100%;
-  background-size: cover;
-  color: white;
-  transition: transform 0.5s; /* Animation */
-  cursor: pointer;
-}
-
-.box:hover {
-  transform: scale(1.08); 
-}
 .bg-1{
   background-image:
   linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0)),
-  url('./Assets/Tax_Impact_hero_black_lores_001.png');
+  url('./Assets/מיניסייט.jpg');
 }
 .bg-2{
   background-image:
   linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0)),
-  url('./Assets/Tax_Insight_hero_black_lores_001.png');}
+  url('./Assets/כתבה.png');}
 .bg-3{
   background-image:
   linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0)),
-  url('./Assets/Tax_Relationships_hero_black_lores_001.png');}
+  url('./Assets/מסמך.jpg');}
 .bg-4{
   background-image:
   linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0)),
-  url('./Assets/Tax_Together_hero_black_lores_001.png');}
+  url('./Assets/Pillar_Two.jpg');
+  background-position: center;
+}
 
 
 .responsive-two-column-grid--custom-gap{
@@ -180,7 +166,7 @@ button{ border: none; margin: 0; padding: 10px 25px 10px 25px; width: auto; over
   gap: 4rem;
 }
 /* -----------------------------------profiles----------------------------------------- */
-.profiles h2{ color: #ffffff; margin: -1rem 2rem; text-align: center; font-size: 2rem; line-height: 1.3;}
+.profiles h2{ color: #ffffff; margin: 0rem 1rem 4rem 1rem; text-align: center; font-size: 2rem; line-height: 1.3;}
 .profiles h2 span{color: #86BC25;}
 .profiles__img { width: 200px; -webkit-user-drag: none; -khtml-user-drag: none; -moz-user-drag: none; -o-user-drag: none; user-drag: none;}
 /* -------------------------------------------Carousel---------------------------------------------- */
@@ -247,7 +233,7 @@ button{ border: none; margin: 0; padding: 10px 25px 10px 25px; width: auto; over
 } */
 .carousel .card {
   scroll-snap-align: start;
-  height: 350px;
+  /* height: 350px; */
   list-style: none;
   background: #000000;
   cursor: pointer;
@@ -287,7 +273,7 @@ button{ border: none; margin: 0; padding: 10px 25px 10px 25px; width: auto; over
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(0,0,0,.5);
+  background-color: rgba(0, 0, 0, 0.733);
   display: flex;
   justify-content: center;
   align-items: center;
